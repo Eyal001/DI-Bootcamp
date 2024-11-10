@@ -1,65 +1,65 @@
 # ex1
 
-# class Cat:
-#   def __init__(self, cat_name, cat_age):
-#     self.name = cat_name
-#     self.age = cat_age
-#     self.cats = []
-# cat_1 = Cat("Garfield", 3)
-# cat_2 = Cat("Tom", 6)
-# cat_3 = Cat("Fluffy", 4)
+class Cat:
+  def __init__(self, cat_name, cat_age):
+    self.name = cat_name
+    self.age = cat_age
+    self.cats = []
+cat_1 = Cat("Garfield", 3)
+cat_2 = Cat("Tom", 6)
+cat_3 = Cat("Fluffy", 4)
 
-# list_cats = [cat_1, cat_2,cat_3]
+list_cats = [cat_1, cat_2,cat_3]
 
-# def oldest_cat(list_cats):
-#     older_cat = list_cats[0]
-#     for cat in list_cats:
-#       if(cat.age > older_cat.age):
-#         older_cat = cat
-#     print(f"The oldest cat is {older_cat.name} and is {older_cat.age}")
+def oldest_cat(list_cats):
+    older_cat = list_cats[0]
+    for cat in list_cats:
+      if(cat.age > older_cat.age):
+        older_cat = cat
+    print(f"The oldest cat is {older_cat.name} and is {older_cat.age}")
 
-# my_cats = oldest_cat(list_cats)
+my_cats = oldest_cat(list_cats)
 
 #ex2
 
-# class Dog:
-#   def __init__(self, name, height):
-#     self.name = name
-#     self.height = height
+class Dog:
+  def __init__(self, name, height):
+    self.name = name
+    self.height = height
     
-#   def bark(self):
-#     print(f"{self.name} goes woof!")
+  def bark(self):
+    print(f"{self.name} goes woof!")
     
-#   def jump(self):
-#     print(f"{self.name} jumps {self.height * 2} cm high!")
+  def jump(self):
+    print(f"{self.name} jumps {self.height * 2} cm high!")
 
-# david_dog = Dog("Rex", 50)
-# print(f"David dog's name is : {david_dog.name} and he is: {david_dog.height} cm tall")
-# david_dog.bark()
-# david_dog.jump()
+david_dog = Dog("Rex", 50)
+print(f"David dog's name is : {david_dog.name} and he is: {david_dog.height} cm tall")
+david_dog.bark()
+david_dog.jump()
 
-# sarahs_dog = Dog("Teacup", 20)
-# print(f"David dog's name is : {sarahs_dog.name} and she is: {sarahs_dog.height} cm tall")
-# sarahs_dog.bark()
-# sarahs_dog.jump()
+sarahs_dog = Dog("Teacup", 20)
+print(f"David dog's name is : {sarahs_dog.name} and she is: {sarahs_dog.height} cm tall")
+sarahs_dog.bark()
+sarahs_dog.jump()
 
-# if(sarahs_dog.height > david_dog.height):
-#   print(f"{sarahs_dog.name} is the biggest dog")
-# else:
-#   print(f"{david_dog.name} is the biggest dog")
+if(sarahs_dog.height > david_dog.height):
+  print(f"{sarahs_dog.name} is the biggest dog")
+else:
+  print(f"{david_dog.name} is the biggest dog")
   
 # ex3
 
-# class Song():
-#   def __init__(self, lyrics):
-#     self.lyrics = lyrics
+class Song():
+  def __init__(self, lyrics):
+    self.lyrics = lyrics
   
-#   def sing_me_a_song(self):
-#     for lyric in self.lyrics:
-#       print(lyric)
+  def sing_me_a_song(self):
+    for lyric in self.lyrics:
+      print(lyric)
       
-# stairway = Song(["There’s a lady who's sure","all that glitters is gold", "and she’s buying a stairway to heaven"])
-# stairway.sing_me_a_song()
+stairway = Song(["There’s a lady who's sure","all that glitters is gold", "and she’s buying a stairway to heaven"])
+stairway.sing_me_a_song()
 
 # ex4
 class Zoo:
