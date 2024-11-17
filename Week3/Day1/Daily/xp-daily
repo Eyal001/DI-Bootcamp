@@ -1,0 +1,33 @@
+-- CREATE TABLE actors(
+-- actor_id SERIAL PRIMARY KEY, 
+-- first_name VARCHAR(50) NOT NULL,
+-- last_name VARCHAR(50) NOT NULL,
+-- age DATE NOT NULL,
+-- number_oscars SMALLINT NOT NULL)
+
+-- SELECT * FROM actors
+-- INSERT INTO actors (first_name, last_name, age, oscars)
+-- VALUES ('Matt', 'LeBlanc','25/07/1967', 0),
+-- ('Jennifer', 'Aniston','11/02/1969', 0),
+-- ('David', 'Schwimmer','02/11/1966', 0),
+-- ('Lisa', 'Kudrow','30/07/1963', 0);
+-- SELECT first_name, last_name FROM 	actors WHERE number_oscars > 2 
+-- UPDATE actors 
+-- SET first_name = 'Angelina', last_name = 'Jolie'
+-- WHERE first_name = 'Brad';
+
+-- TRUNCATE TABLE actors RESTART IDENTITY
+
+-- SELECT * FROM actors
+
+-- ALTER TABLE actors RENAME COLUMN number_oscars TO oscars
+
+-- SELECT COUNT (*) FROM actors --5
+-- INSERT INTO actors (first_name, last_name, age, oscars)
+-- VALUES ('Matt', '','25/07/1967',0)
+-- if i put a empty string instead of the last_name(example) that will create a new row with last_name the field is empty but not null so its gonna work,
+-- if i put nothing like there is less field like below, that give me an error because it expects the field to be filled (so not null)
+
+-- INSERT INTO actors (first_name, last_name, age, oscars)
+-- VALUES ('25/07/1967',0);
+-- SELECT * FROM actors
