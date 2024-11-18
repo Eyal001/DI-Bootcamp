@@ -1,0 +1,18 @@
+    -- SELECT COUNT(*) 
+    -- FROM FirstTab AS ft WHERE ft.id NOT IN ( SELECT id FROM SecondTab WHERE id IS NULL ) 
+	-- OUTPUT = 2   
+	
+	-- SELECT COUNT(*) 
+ --    FROM FirstTab AS ft WHERE ft.id NOT IN ( SELECT id FROM SecondTab WHERE id = 5 )
+	-- OUTPUT = 2  -- 6 and 7 
+
+	-- SELECT COUNT(*) 
+ --    FROM FirstTab AS ft WHERE ft.id NOT IN ( SELECT id FROM SecondTab )
+	-- OUTPUT = 2 -- 6 and 7 
+
+	-- SELECT COUNT(*) 
+ --    FROM FirstTab AS ft WHERE ft.id NOT IN ( SELECT id FROM SecondTab WHERE id IS NOT NULL )
+	-- OUTPUT = 3, --5 6 and 7
+
+	--- After testing i understood that when we want compare something in a subquery with a NULL value that doesn't work and always return 0
+	
