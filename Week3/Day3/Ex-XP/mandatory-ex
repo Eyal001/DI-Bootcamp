@@ -1,0 +1,88 @@
+-- SELECT * FROM language
+-- select * from film
+
+-- select film.title,film.description, language.name FROM film
+-- JOIN language ON film.language_id = language.language_id
+
+-- select film.title, film.description, language.name from language
+-- LEFT JOIN film ON film.language_id = language.language_id
+
+-- CREATE TABLE new_film(
+-- film_id SERIAL PRIMARY KEY,
+-- name VARCHAR(50)
+-- )
+-- INSERT INTO new_film (name) VALUES
+-- ('The Matrix'),
+-- ('Inception'),
+-- ('The Godfather');
+ -- select * from new_film
+ 
+-- CREATE TABLE customer_review(
+-- review_id SERIAL PRIMARY KEY NOT NULL,
+-- film_id INTEGER,
+-- language_id INTEGER,
+-- title VARCHAR(200) NOT NULL,
+-- score INTEGER CHECK (score > 0 AND score <= 10) NOT NULL,
+-- review_text TEXT,
+-- last_update TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+-- FOREIGN KEY (film_id) REFERENCES new_film(film_id) ON DELETE CASCADE,
+-- FOREIGN KEY (language_id) REFERENCES language(language_id)
+-- )
+
+-- select * from customer_review
+
+
+-- INSERT INTO customer_review (film_id, language_id, title, score, review_text)
+-- VALUES
+-- (1, 1, 'Great Movie!', 9, 'The Matrix is a groundbreaking movie. Highly recommended.');
+
+-- INSERT INTO customer_review (film_id, language_id, title, score, review_text)
+-- VALUES
+-- (2, 1, 'Mind-blowing!', 10, 'Inception is a cinematic masterpiece. A must-watch for everyone.');
+
+
+-- DELETE FROM new_film where film_id = 2
+-- SELECT * FROM new_film;
+
+-- EXERCISE 2--
+-- select * from film where language_id=2
+
+-- UPDATE film SET language_id = 2 
+-- WHERE title IN ('Grosse Wonderful', 'Chamber Italian','Airport Pollock', 'African Egg')
+
+-- In the customer table we have a store_id and an address_id as foreign key and also  everytime that we want to insert data into the customer table we have to pass these two id's (there are not null values) 
+-- DROP TABLE customer_review no extra checking is needed 
+
+-- select * from rental where return_date IS NULL
+-- select * from film
+
+-- select * from rental 
+-- INNER JOIN inventory ON rental.inventory_id = inventory.inventory_id
+-- LEFT JOIN film ON inventory.film_id = film.film_id
+-- WHERE rental.return_date IS NULL
+-- ORDER BY film.replacement_cost DESC
+-- LIMIT 30
+
+-- Select * from film_actor
+-- INNER JOIN film ON film.film_id = film_actor.film_id
+-- WHERE actor_id=(SELECT actor_id from actor where first_name='Penelope' AND last_name='Monroe')
+-- AND film.fulltext @@ to_tsquery('english','sumo')
+
+
+-- SELECT * FROM film
+-- INNER JOIN film_category ON film.film_id = film_category.film_id
+-- WHERE film_category.category_id =6 AND length < 60 AND rating='R'
+
+-- SELECT * FROM inventory
+-- INNER JOIN film ON film.film_id= inventory.film_id
+-- INNER JOIN rental ON rental.inventory_id=inventory.inventory_id
+-- INNER JOIN customer ON customer.customer_id = rental.customer_id
+-- WHERE customer.first_name='Matthew' AND last_name='Mahan' AND film.rental_rate > 4 AND rental.return_date BETWEEN '2005-07-28' AND '2005-08-01'
+
+-- SELECT * FROM inventory
+-- INNER JOIN film ON film.film_id= inventory.film_id
+-- INNER JOIN rental ON rental.inventory_id=inventory.inventory_id
+-- INNER JOIN customer ON customer.customer_id = rental.customer_id
+-- WHERE customer.first_name='Matthew' AND last_name='Mahan' AND (film.title LIKE '%Boat%' OR film.description LIKE '%Boat%')
+-- ORDER BY film.replacement_cost DESC LIMIT 1
+
