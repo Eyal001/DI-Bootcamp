@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <label for="fname">First name:</label><br />
+      <input type="text" id="fname" name="firstname" /><br />
+      <label for="lname">Last name:</label><br />
+      <input type="text" id="lname" name="lastname" /><br /><br />
+      <input type="submit" value="Submit" id="submit" />
+    </form>
+    <ul class="usersAnswer"></ul>
+    <script>
+      const myForm = document.querySelector("form");
+      console.log(myForm);
+
+      const fName = document.getElementById("fname");
+      const lName = document.getElementById("lname");
+      const subm = document.getElementById("submit");
+      console.log(fName, lName, subm);
+
+      const fNameByName = document.querySelector('[name="firstname"]');
+      const lNameByName = document.querySelector('[name="lastname"]');
+
+      console.log(fNameByName, lNameByName);
+
+      myForm.addEventListener("submit", function (event) {
+        event.preventDefault(); // prevent the default behavior of the page so it won't reload the page
+
+        const firstName = fName.value.trim();
+        const lastName = lName.value.trim();
+
+        if (firstName && lastName) {
+          const firstNameLi = document.createElement("li");
+          const lastNameLi = document.createElement("li");
+          firstNameLi.textContent = firstName;
+          lastNameLi.textContent = lastName;
+
+          const ulElem = document.querySelector("ul");
+          ulElem.appendChild(firstNameLi);
+          ulElem.appendChild(lastNameLi);
+        } else alert("Please fill the form");
+      });
+    </script>
+  </body>
+</html>

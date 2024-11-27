@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <article>
+      <h1>Some Facts</h1>
+      <h2>The Chocolate</h2>
+      <h3>History of the chocolate</h3>
+      <p>
+        Chocolate is made from tropical Theobroma cacao tree seeds. Its earliest
+        use dates back to the Olmec civilization in Mesoamerica.
+      </p>
+      <p>
+        After the European discovery of the Americas, chocolate became very
+        popular in the wider world, and its demand exploded.
+      </p>
+      <p>
+        Chocolate has since become a popular food product that millions enjoy
+        every day, thanks to its unique, rich, and sweet taste.
+      </p>
+      <p>But what effect does eating chocolate have on our health?</p>
+    </article>
+    <button id="button-bold">Transform</button>
+    <script>
+      const h1Elem = document.querySelector("h1");
+      console.log(h1Elem);
+
+      const article = document.querySelector("article");
+      const allPar = article.querySelectorAll("p");
+      allPar[allPar.length - 1].remove(); //remove the last p
+      console.log(allPar);
+
+      const h2Elem = document.querySelector("h2");
+
+      h2Elem.addEventListener("click", () => {
+        h2Elem.style.backgroundColor = "red";
+      });
+
+      const h3Elem = document.querySelector("h3");
+      h3Elem.addEventListener("click", () => {
+        h3Elem.style.display = "none";
+      });
+
+      const myButton = document.getElementById("button-bold");
+      myButton.addEventListener("click", () => {
+        const allPar = document.querySelectorAll("p");
+        allPar.forEach((paragraph) => {
+          paragraph.style.fontWeight = "bold";
+        });
+      });
+
+      h1Elem.addEventListener("mouseover", () => {
+        const randomSize = Math.floor(Math.random() * 101);
+        h1Elem.style.fontSize = `${randomSize}px`;
+      });
+    </script>
+  </body>
+</html>
