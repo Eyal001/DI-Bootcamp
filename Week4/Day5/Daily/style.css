@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Roboto:wght@300;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+}
+.background {
+  background-image: linear-gradient(100deg, #575656, #062e3f);
+  color: #ffdfdb;
+  transition: 0.3s linear;
+  overflow: hidden;
+}
+body {
+  background-image: linear-gradient(100deg, #575656, #062e3f);
+  color: #ffdfdb;
+  transition: 0.3s linear;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+}
+
+#myinput {
+  width: 500px;
+  height: 20px;
+  border-radius: 20px;
+  border: 2px solid #062e3f;
+  background-color: rgba(0, 0, 0, 0.658);
+  color: #ffdfdb;
+  padding: 20px 20px;
+  font-size: 1rem;
+  outline: none;
+}
+
+#myinput:focus {
+  border-color: #333;
+}
+
+#button {
+  width: 100px;
+  height: 45px;
+  border-radius: 20px;
+  background-color: #fff;
+  border: 2px solid #062e3f;
+  color: #000;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.1s ease;
+}
+#button:hover {
+  background-color: #dbdbdb;
+}
+
+.title {
+  margin-top: 100px;
+  font-size: 7rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+#tasks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  margin-top: 20px;
+}
+
+#tasks li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: none;
+  color: #ffdfdb;
+  font-size: 1.2rem;
+  margin-right: 50px;
+  width: auto;
+}
+#tasks li button i {
+  font-size: 1.2rem;
+}
+#tasks li input[type="checkbox"] {
+  margin-left: 10px;
+}
+
+#tasks li label {
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+#tasks li button {
+  background-color: transparent;
+  border: none;
+  color: #ffdfdb;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+#tasks li button:hover {
+  color: #ff6f61;
+}
+ul {
+  list-style-type: none;
+}
