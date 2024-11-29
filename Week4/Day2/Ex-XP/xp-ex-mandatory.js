@@ -32,7 +32,7 @@ for (let i = 0; i < people.length; i++) {
   console.log(people[i]);
 }
 
-ex2
+// ex2
 
 const colors = ["Blue", "Red", "Yellow", "Brown", "Green"];
 const suffixes = ["st", "nd", "rd"];
@@ -43,7 +43,7 @@ for (let i = 0; i < colors.length; i++) {
   console.log("My " + (i + 1) + suffixe + " choice is " + colors[i]);
 }
 
-ex3
+// ex3
 
 userPhoneNum = prompt("Please type your phone number:");
 
@@ -54,7 +54,7 @@ while (userPhoneNum < 10) {
 
 console.log(typeof userPhoneNum); // string
 
-ex4
+// ex4
 const building = {
   numberOfFloors: 4,
   numberOfAptByFloor: {
@@ -87,7 +87,7 @@ if ((sarahRent + davidRent) > danRent){
 }
 console.log(building.numberOfRoomsAndRent.dan[1])
 
-ex5
+// ex5
 
 const family = {
   father: "John",
@@ -103,7 +103,7 @@ for (let key in family) {
   console.log(family[key]);
 }
 
-ex6
+// ex6
 
 const details = {
   my: "name",
@@ -117,7 +117,7 @@ for (let key in details) {
 }
 console.log(sentence);
 
-ex7
+// ex7
 
 const names = ["Jack", "Philip", "Sarah", "Amanda", "Bernard", "Kyle"];
 
