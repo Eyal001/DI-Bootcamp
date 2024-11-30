@@ -3,8 +3,11 @@ const button = document.getElementById("button");
 const taskUl = document.getElementById("tasks");
 const taskInput = document.getElementById("myinput");
 let taskIdCounter = 0;
-function addTask() {
+
+function addTask(event) {
+  event.preventDefault();
   const task = taskInput.value;
+  console.log(task);
   if (task.trim() === "") {
     alert("Please enter a task.");
     return;
@@ -15,7 +18,6 @@ function addTask() {
     text: task,
     done: false,
   };
-
   tasks.push(newTaskObj);
 
   const newTask = document.createElement("li");
