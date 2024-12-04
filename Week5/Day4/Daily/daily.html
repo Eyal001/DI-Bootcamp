@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daily:</title>
+  </head>
+  <body>
+    <form id="form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" />
+      <label for="lastname">Last Name:</label>
+      <input type="text" id="lastname" />
+      <input type="submit" value="send" />
+    </form>
+    <div id="output"></div>
+    <script>
+      document.getElementById("form").addEventListener("submit", (event) => {
+        event.preventDefault();
+        const name = document.getElementById("name").value;
+        const lastName = document.getElementById("lastname").value;
+        const jsonObj = {
+          name: name,
+          lastname: lastName,
+        };
+        const jsonStr = JSON.stringify(jsonObj);
+        document.getElementById("output").textContent = jsonStr;
+      });
+    </script>
+  </body>
+</html>
