@@ -1,0 +1,27 @@
+<!-- display.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display Data</title>
+  </head>
+  <body>
+    <h1>Data Received</h1>
+    <section id="display-section"></section>
+
+    <script>
+      const SearchParams = new URLSearchParams(window.location.search);
+      const name = SearchParams.get("name");
+      const lastName = SearchParams.get("lastname");
+
+      const displaySection = document.getElementById("display-section");
+
+      if (name && lastName) {
+        displaySection.innerHTML = `<p> Name: ${name} Lastname: ${lastName} </p>`;
+      } else {
+        displaySection.innerHTML = `<p> NO data found. </p>`;
+      }
+    </script>
+  </body>
+</html>
