@@ -1,0 +1,130 @@
+@import url("https://fonts.cdnfonts.com/css/sega-logo-font");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: rgb(79, 77, 175);
+  background-image: url(assets/circuit-pattern.png);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.wrapper-nav {
+  font-family: "SEGA LOGO FONT", sans-serif;
+  width: 100%;
+  display: flex;
+  padding: 30px 50px 50px;
+  background-color: rgb(117, 223, 113);
+}
+
+input {
+  width: 50vw;
+  height: 100%;
+  padding-left: 10px;
+  border-radius: 5px;
+  border: 0.5px solid #212158;
+  background-color: rgb(216, 233, 248);
+}
+
+.wrapper-nav span {
+  font-family: "SEGA LOGO FONT", sans-serif;
+  color: #212158;
+  font-size: 2em;
+  margin-right: 70px;
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.cards-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  padding: 90px 30px 30px 30px;
+  max-width: 1200px;
+}
+
+.card {
+  font-family: "Montserrat", sans-serif;
+  background-image: url(assets/card-pattern.png);
+  background-color: rgb(107, 235, 213);
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  width: 300px;
+  height: 400px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.image-container {
+  width: 250px;
+  height: 250px;
+  background-color: #212158;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.robot-name {
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-bottom: 5px;
+}
+
+.robot-email {
+  font-weight: normal;
+  font-size: 1em;
+  color: #212158;
+}
+.cards-section.single-card .card {
+  width: 300px;
+  height: 400px;
+}
+
+@media (min-width: 600px) and (max-width: 1200px) {
+  .card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 100%;
+  }
+}
