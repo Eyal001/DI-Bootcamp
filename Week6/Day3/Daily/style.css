@@ -1,0 +1,86 @@
+body {
+  font-family: Arial, sans-serif;
+  background-image: url("https://store-images.s-microsoft.com/image/apps.3790.13746602931236419.ec145616-d3b2-4fef-b955-55708f912cfd.44b1adcc-6220-448a-ada7-ec31717c5e62?mode=scale&q=90&h=1080&w=1920");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.card {
+  background-color: rgba(52, 52, 97, 0.726);
+  border: 2px solid rgba(0, 0, 255, 0.3);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  width: 300px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+select {
+  max-height: 200px;
+  overflow-y: auto;
+}
+select,
+input[type="number"],
+button {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-top: 5px;
+  font-size: 1rem;
+  border-radius: 5px;
+  outline: none;
+}
+
+select:focus,
+input[type="number"]:focus,
+button:focus {
+  border-color: #ffffff;
+}
+
+button {
+  background-color: #1e90ff;
+  color: #ffffff;
+  cursor: pointer;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #00bfff;
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+}
