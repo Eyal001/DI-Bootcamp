@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "username": "EyalZ14",
+    "password": "$2a$10$3.IYUixs7IXjlvagUOWQ7.h2pUltHaw.B9xmC5J5Fsm74p4AlISsa",
+    "name": "Eyal",
+    "last_name": "Dev",
+    "email": "devinstitute@gmail.com"
+  },
+  {
+    "id": 2,
+    "username": "Username1",
+    "password": "$2a$10$B2SwMLskoYFo12FsN1u5/OUiLnnUvw9b2.EZV9zUApF5WDw/BeE2e",
+    "name": "Someone",
+    "last_name": "Someonesname",
+    "email": "anemail@email.com"
+  },
+  {
+    "id": 3,
+    "username": "username",
+    "password": "$2a$10$/u06fAdX820ZfJCZak3TaerXNEEFVb070W7hmvOancU3cYC8ViCqK",
+    "name": "testname",
+    "last_name": "testln",
+    "email": "testemail@mail.com"
+  }
+]

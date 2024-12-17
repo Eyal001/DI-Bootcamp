@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+  </head>
+  <body>
+    <h2>Register</h2>
+    <form id="registerForm" method="POST" onsubmit="submitForm(event)">
+      <label>Name:</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        oninput="checkForm()"
+      /><br /><br />
+
+      <label>Last Name:</label>
+      <input
+        type="text"
+        id="lastName"
+        name="lastName"
+        oninput="checkForm()"
+      /><br /><br />
+
+      <label>Email:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        oninput="checkForm()"
+      /><br /><br />
+
+      <label>Username:</label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        oninput="checkForm()"
+      /><br /><br />
+
+      <label>Password:</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        oninput="checkForm()"
+      /><br /><br />
+
+      <button type="submit" id="submitBtn" disabled>Register</button>
+    </form>
+
+    <div id="messageContainer"></div>
+    <script src="./js/register.js"></script>
+  </body>
+</html>
