@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import Form from "./Components/Form";
 
 function App() {
   const [formData, setFormData] = useState({
@@ -15,104 +16,10 @@ function App() {
     },
   });
 
-  const handleInput = (e) => {
-    const { name, value, type, checked } = e.target;
-    setFormData((prevState) => {
-      if (type === "checkbox") {
-        return {
-          ...prevState,
-          dietaryRestrictions: {
-            ...prevState.dietaryRestrictions,
-            [name]: checked,
-          },
-        };
-      }
-      return { ...prevState, [name]: value };
-    });
-  };
-
   return (
     <div className="form">
       <h1>Sample Form</h1>
-      <form>
-        <div>
-          <label>First Name:</label>
-          <input
-            type="text"
-            name="firstName"
-            onChange={(e) => handleInput(e)}
-          />
-        </div>
-        <div>
-          <label>Last Name:</label>
-          <input type="text" name="lastName" onChange={(e) => handleInput(e)} />
-        </div>
-        <div>
-          <label>Age:</label>
-          <input type="number" name="age" onChange={(e) => handleInput(e)} />
-        </div>
-        <div>
-          <label>Gender:</label>
-          <label>
-            Male
-            <input
-              type="radio"
-              name="gender"
-              value="male"
-              onChange={(e) => handleInput(e)}
-            />
-          </label>
-          <label>
-            Female
-            <input
-              type="radio"
-              name="gender"
-              value="female"
-              onChange={(e) => handleInput(e)}
-            />
-          </label>
-        </div>
-        <div>
-          <label>Destination:</label>
-          <select name="destination" onChange={(e) => handleInput(e)}>
-            <option value="">Select a destination</option>
-            <option value="Thailand">Thailand</option>
-            <option value="Japan">Japan</option>
-            <option value="Brazil">Brazil</option>
-          </select>
-        </div>
-        <div>
-          <label>Dietary Restrictions:</label>
-          <div>
-            <label>
-              Nuts Free
-              <input
-                type="checkbox"
-                name="nutsFree"
-                onChange={(e) => handleInput(e)}
-              />
-            </label>
-            <label>
-              Lactose Free
-              <input
-                type="checkbox"
-                name="lactoseFree"
-                onChange={(e) => handleInput(e)}
-              />
-            </label>
-            <label>
-              Vegan
-              <input
-                type="checkbox"
-                name="vegan"
-                onChange={(e) => handleInput(e)}
-              />
-            </label>
-          </div>
-        </div>
-        <button type="submit">Submit</button>
-      </form>
-
+      <Form formData={formData} setFormData={setFormData} />
       <div>
         <h2>Entered information:</h2>
         <p>
@@ -128,7 +35,7 @@ function App() {
           </span>
           <br />
           <span>
-            Lactose free:{" "}
+            Lactose free:
             {formData.dietaryRestrictions.lactoseFree ? "Yes" : "No"}
           </span>
           <br />
