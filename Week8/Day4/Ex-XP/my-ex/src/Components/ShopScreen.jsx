@@ -1,0 +1,5 @@
+const ShopScreen = () => {
+  throw new Error("Error !!");
+  return <h1>Shop</h1>;
+};
+export default ShopScreen;
