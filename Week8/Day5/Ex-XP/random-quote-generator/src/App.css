@@ -1,0 +1,55 @@
+html {
+  background-color: var(--bg-color);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: var(--bg-color);
+  font-family: "Arial", sans-serif;
+  text-align: center;
+  overflow: hidden;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.quote-container {
+  background-color: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 70%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: inherit;
+}
+
+h5 {
+  font-size: 1.2rem;
+  color: inherit;
+  margin-bottom: 30px;
+}
+
+button {
+  width: 100px;
+  height: 35px;
+  border-radius: 5px;
+  color: white;
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
