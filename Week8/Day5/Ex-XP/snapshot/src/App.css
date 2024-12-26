@@ -1,0 +1,77 @@
+@import url("https://fonts.cdnfonts.com/css/pacifico");
+* {
+  font-family: "Pacifico", sans-serif;
+}
+h1 {
+  color: rgb(13, 13, 94);
+  font-size: 48px;
+}
+h3 {
+  color: rgb(13, 13, 94);
+}
+nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  display: flex;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  color: rgb(13, 13, 94);
+}
+
+nav ul li a:hover {
+  color: #0056b3;
+}
+
+input {
+  padding: 5px;
+  font-size: 20px;
+  width: 300px;
+  background-color: rgba(240, 239, 239, 0.904);
+  border: 2px solid gray;
+  border-radius: 5px;
+  text-indent: 5px;
+}
+
+button {
+  border-radius: 5px;
+  border: 2px solid gray;
+  height: 50px;
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.gallery {
+  text-align: center;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  padding: 60px;
+}
+
+.image-card img {
+  width: 90%;
+  height: auto;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.image-card img:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
